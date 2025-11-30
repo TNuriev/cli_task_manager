@@ -1,28 +1,42 @@
-### Build project
-mkdir build  
-cd build  
-cmake --build .  
+# Task Tracker
 
-### Run project
-cd ../Debug  
-.\TaskManager add "New Task"  
+Sample solution for the [task-tracker](https://roadmap.sh/projects/task-tracker) challenge from [roadmap.sh](https://roadmap.sh/).
 
-### Adding a new task
-.\TaskManager add "Buy groceries"  
-Output: Task added successfully (ID: 1)  
+## How to run
 
-### Updating and deleting tasks
-.\TaskManager update 1 "Buy groceries and cook dinner"  
-.\TaskManager delete 1  
+Clone the repository and run the following command:
 
-### Marking tasks as in progress or done
-.\TaskManager mark-in-progress 1  
-.\TaskManager mark-done 1  
+```bash
+git clone https://github.com/TNuriev/cli_task_manager.git
+cd cli_task_manager
+```
 
-#### Listing all tasks
-.\TaskManager list  
+Run the following command to build the project:
 
-### Listing tasks by status
-.\TaskManager list done  
-.\TaskManager list todo  
-.\TaskManager list in-progress  
+```bash
+mkdir build
+cd build
+cmake ..
+cmake --build .
+cd ../Debug
+
+# To add a task
+./TaskManager add "Buy groceries"
+
+# To update a task
+./TaskManager update 1 "Buy groceries and cook dinner"
+
+# To delete a task
+./TaskManager delete 1
+
+# To mark a task as in progress/done/todo
+cli mark-in-progress 1
+./TaskManager mark-done 1
+./TaskManager mark-todo 1
+
+# To list all tasks
+./TaskManager list
+./TaskManager list done
+./TaskManager list todo
+./TaskManager list in-progress
+```
