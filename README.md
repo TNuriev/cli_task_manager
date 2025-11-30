@@ -30,7 +30,7 @@ cd ../Debug
 ./TaskManager delete 1
 
 # To mark a task as in progress/done/todo
-cli mark-in-progress 1
+./TaskManager mark-in-progress 1
 ./TaskManager mark-done 1
 ./TaskManager mark-todo 1
 
